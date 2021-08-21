@@ -117,4 +117,31 @@ public class UsuarioDAO {
 		}
 		return registros;
 	}
+	
+	public int eliminar(Usuario user) {
+		Connection conet = null;
+		PreparedStatement stmt = null;
+		int registros = 0;
+
+		try {
+
+			conet = Conexion.getConnection();
+			stmt = conet.prepareStatement(SQL_DELETE);
+
+			stmt.setInt(1, user.getIdUsuario());
+
+			registros = stmt.executeUpdate();
+
+		} catch (SQLException ex) {
+			ex.printStackTrace(System.out);
+		} finally {
+			try {
+				close(stmt);
+				close(conet);
+			} catch (SQLException ex) {
+				ex.printStackTrace(System.out);
+			}
+		}
+		return registros;
+	}
 }
