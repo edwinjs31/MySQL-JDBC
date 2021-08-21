@@ -1,0 +1,5 @@
+prueba\ManejoPersonas.class
+datos\Conexion.class
+datos\PersonaDAO.class
+prueba\PruebaMySqlJDBC.class
+dominio\Persona.class
