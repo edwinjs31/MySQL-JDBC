@@ -37,7 +37,7 @@ public class ManejoPersonas {
 					case 2://GESTION DE USUARIOS
 						gestionUsuarios(usuarioDao);
 						break;
-					case 3://salir
+					case 3://SALIR DEL MENU PRINCIPAL
 						JOptionPane.showMessageDialog(null, "Hata pronto!!");
 						salir = true;
 						break;
