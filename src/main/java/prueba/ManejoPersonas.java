@@ -16,7 +16,7 @@ public class ManejoPersonas {
 
 	public static void main(String[] args) {
 
-		//CON ESTAS INSTANCIAS PODREMOS ACCEDER A LOS METODOS DE ACCESO A DATOS.
+		//CON ESTAS INSTANCIAS PODREMOS ACCEDER A LOS RESPECTIVOS METODOS DE ACCESO A DATOS.
 		PersonaDAO personaDao = new PersonaDAO();
 		UsuarioDAO usuarioDao = new UsuarioDAO();
 
