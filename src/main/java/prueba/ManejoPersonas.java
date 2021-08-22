@@ -41,7 +41,7 @@ public class ManejoPersonas {
 						JOptionPane.showMessageDialog(null, "Hata pronto!!");
 						salir = true;
 						break;
-					default:
+					default://EN CASO DE ELEGIR OTRA OPCION
 						JOptionPane.showMessageDialog(null, "Opcion incorrecta!!", "Error", JOptionPane.WARNING_MESSAGE);
 						break;
 				}
