@@ -20,7 +20,7 @@ public class ManejoPersonas {
 		PersonaDAO personaDao = new PersonaDAO();
 		UsuarioDAO usuarioDao = new UsuarioDAO();
 
-		int opc = 0;
+	int opc = 0;
 		String menu1 = "1. Gestion Personal\n"
 				+ "2. Gestion de Usuarios\n"
 				+ "3. Salir\n"
@@ -115,7 +115,7 @@ public class ManejoPersonas {
 	public static void actualizarPersona(PersonaDAO personaDao) {
 		int idPersona, registros = 0;
 		String nombre, apellido, email, tlfno;
-		idPersona = Integer.valueOf(JOptionPane.showInputDialog("Id Persona: "));
+		idPersona = Integer.valueOf(JOptionPane.showInputDialog("Id Persona a modificar: "));
 		nombre = JOptionPane.showInputDialog("Nombre:");
 		apellido = JOptionPane.showInputDialog("Apellido:");
 		email = JOptionPane.showInputDialog("Email:");
@@ -128,7 +128,7 @@ public class ManejoPersonas {
 
 	public static void eliminarPersona(PersonaDAO personaDao) {
 		int idPersona, registros = 0;
-		idPersona = Integer.valueOf(JOptionPane.showInputDialog("Id Persona: "));
+		idPersona = Integer.valueOf(JOptionPane.showInputDialog("Id Persona a eliminar: "));
 		Persona persona = new Persona(idPersona);
 		registros = personaDao.eliminar(persona);
 		JOptionPane.showMessageDialog(null, registros, "REGISTROS ELIMINADOS", JOptionPane.INFORMATION_MESSAGE);
@@ -200,7 +200,7 @@ public class ManejoPersonas {
 	public static void actualizarUsuario(UsuarioDAO usuarioDao) {
 		int idUsu, registros = 0;
 		String nombreUsu, pass;
-		idUsu = Integer.valueOf(JOptionPane.showInputDialog("Id Usuario: "));
+		idUsu = Integer.valueOf(JOptionPane.showInputDialog("Id Usuario a actualizar: "));
 		nombreUsu = JOptionPane.showInputDialog("Usuario:");
 		pass = JOptionPane.showInputDialog("Password:");
 
@@ -211,7 +211,7 @@ public class ManejoPersonas {
 
 	public static void eliminarUsuario(UsuarioDAO usuarioDao) {
 		int idUsu, registros = 0;
-		idUsu = Integer.valueOf(JOptionPane.showInputDialog("Id Usuario: "));
+		idUsu = Integer.valueOf(JOptionPane.showInputDialog("Id Usuario a eliminar: "));
 		Usuario usuarioNuevo = new Usuario(idUsu);
 		registros = usuarioDao.eliminar(usuarioNuevo);
 		JOptionPane.showMessageDialog(null, registros, "REGISTROS ELIMINADOS", JOptionPane.INFORMATION_MESSAGE);
